@@ -1,6 +1,6 @@
 {
   "name": "Equip2 2016",
   "tagline": "",
-  "body": "# INTRODUCCIÓ\r\nAquesta es la web de l'equip 2 del projecte de l'assignatura Gestió i Distribució del Senyal Audiovisual del Grau en Enginyeria de Sistemes Audiovisuals de l'ESEIAAT de la Universitat Politècnica de Catalunya.",
+  "body": "# INTRODUCCIÓ\r\nAquesta es la web de l'equip 2 del projecte de l'assignatura Gestió i Distribució del Senyal Audiovisual del Grau en Enginyeria de Sistemes Audiovisuals de l'ESEIAAT de la Universitat Politècnica de Catalunya.\r\n\r\n## Que es?\r\nEn aquesta web es publicaràn els resultats del projecte d'enginyeria de l'assignatura GDSA. Es tracta de crear una aplicació capaç d'identificar 12 edificis diferents de Terrassa i dir el seu nom. També ha de ser capaç d'identificar si es un edifici desconegut.",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
