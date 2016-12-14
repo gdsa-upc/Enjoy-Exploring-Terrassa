@@ -9,7 +9,7 @@ import os, time
 import numpy as np
 import pickle
 import cv2
-from sklearn.cluster import MiniBatchKMeans
+from sklearn.cluster import MeanShift
 from sklearn.preprocessing import normalize, StandardScaler
 from sklearn.decomposition import PCA
 import warnings
