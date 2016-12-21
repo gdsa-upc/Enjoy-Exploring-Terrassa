@@ -228,3 +228,6 @@ if __name__ == "__main__":
         if not id == 'desconegut':
             # We divide by 10 because it's the number of images per class in the validation set.
             print id, dict_[id]/10
+    # ID de la imatge de validacio sense el '.jpg'
+    query_id='168-2743-15592'
+    single_eval(params,query_id)
