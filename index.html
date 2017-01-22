@@ -1,42 +1,33 @@
 <!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Enjoy Exploring Terrassa by gdsa-upc</title>
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
-  <link rel="stylesheet" href="stylesheets/github-dark.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  <title>Enjoy Exploring Terrassa</title>
-  <meta name="description" content="">
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-</head>
-
-<body>
-
-  <div class="wrapper">
-    <header>
-      <h1 class="title">Enjoy Exploring Terrassa</h1>
-    </header>
-    <div id="container">
-      <p class="tagline"></p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/zipball/master" class="download-button zip"><span>Download</span></a>
-          <a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa" class="code">View Enjoy Exploring Terrassa on GitHub</a>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <p><img src="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/raw/gh-pages/images/logo.jpg" alt="logo"> </p>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="without-description">
+        <h1>Enjoy Exploring Terrassa</h1>
+        <p></p>
+        <p class="view"><a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa">View the Project on GitHub <small>gdsa-upc/Enjoy-Exploring-Terrassa</small></a></p>
+        <ul>
+          <li><a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p><img src="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/raw/gh-pages/images/logo.jpg" alt="logo"> </p>
 
 <table>
 <thead>
@@ -123,31 +114,29 @@ Aquí dos exemple de les dues classes d'imatges que trobem:</p>
 <a id="com-funciona" class="anchor" href="#com-funciona" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Com funciona?</h2>
 
 <h3>
-<a id="introducció-al-funcionament" class="anchor" href="#introducci%C3%B3-al-funcionament" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introducció al funcionament:</h3>
+<a id="creació-duna-base-de-dades" class="anchor" href="#creaci%C3%B3-duna-base-de-dades" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creació d'una base de dades:</h3>
+
+<p>Primerament, per tal de començar el nostre projecte, el nostre primer objectiu va ser la creació d'una <em>base de dades</em>.Això ho vem fer a partir d'una <em>base de dades</em> ja existent, realitzada per alumnes d'any anteriors, amb unes 180 fotos d'entrenament, que com el nom indica, serviran per entrenar el nostre sistema i, per 450 fotos de validació que serviran per evaluar el nostre sistema. Així doncs, a partir d'aquesta <em>base de dades</em> la nostre primera tasca va ser expendir-la, afegint-hi imatges, tant d'entranament, com de validació i distractors, per tal d'aconseguir una <em>base de dades</em> més amplia. Finalment vem crear un <a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/blob/master/Notebooks/build_database_notebook.ipynb">script</a> per crear aquesta base de dades.</p>
+
+<h3>
+<a id="primer-script-detecció-de-punts-característics" class="anchor" href="#primer-script-detecci%C3%B3-de-punts-caracter%C3%ADstics" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Primer Script: Detecció de punts característics</h3>
+
+<p>Un cop teniem la base de dades creada vem puguer començar a treballar amb aquesta. Amb el primer que vem treballar va ser amb la creació d'una <a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/blob/master/First%20script.ipynb">funció</a> per tal de trobar els punts característics de les diferents imatges.</p>
+
+<p><img src="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/raw/gh-pages/images/punts.png" alt="punts"></p>
+
+<h3></h3>
 
 <p>El funcionament d’aquesta aplicació consta de diferents parts, com ara la base de dades, els extractors de característiques, classificació de les imatges…
 També hi ha la part encarregada de realitzar l’extracció de descriptors de les imatges, per tal de poder extreure els punts característics (importants) de cada imatge.
 Aquesta informació es guarda en fitxers i és la que ens permetrà relacionar les imatges i trobar la que busquem.</p>
-        </article>
-      </div>
+      </section>
     </div>
     <footer>
-      <div class="owner">
-      <p><a href="https://github.com/gdsa-upc" class="avatar"><img src="https://avatars3.githubusercontent.com/u/15773761?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/gdsa-upc">gdsa-upc</a> maintains <a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa">Enjoy Exploring Terrassa</a></p>
-
-
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
+      <p>Project maintained by <a href="https://github.com/gdsa-upc">gdsa-upc</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
     </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/tarball/master" class="tar">tar</a><a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
-
-  
-</body>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
 </html>
