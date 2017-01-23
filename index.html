@@ -48,6 +48,9 @@
 <tr>
 <td><a href="https://docs.google.com/presentation/d/1Ol8B8NNOnoMb-ZDMElMFij1bH5sTInz8Qd3Y1cDpm_4/edit#slide=id.g1a3455afc3_0_0">Sessió 6</a></td>
 </tr>
+<tr>
+<td><a href="https://docs.google.com/presentation/d/1tAGuff363eBT5GbqVj1YCMlYcIp9q2Xxw9rUffX-exU/edit#slide=id.g1a369ec9a6_1_66">Presentació final</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -116,20 +119,48 @@ Aquí dos exemple de les dues classes d'imatges que trobem:</p>
 <h3>
 <a id="creació-duna-base-de-dades" class="anchor" href="#creaci%C3%B3-duna-base-de-dades" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creació d'una base de dades:</h3>
 
-<p>Primerament, per tal de començar el nostre projecte, el nostre primer objectiu va ser la creació d'una <strong><em>base de dades</em></strong>.Això ho vem fer a partir d'una <em>base de dades</em> ja existent, realitzada per alumnes d'any anteriors, amb unes 180 fotos d'entrenament, que com el nom indica, serviran per entrenar el nostre sistema i, per 450 fotos de validació que serviran per evaluar el nostre sistema. Així doncs, a partir d'aquesta <em>base de dades</em> la nostre primera tasca va ser expendir-la, afegint-hi imatges, tant d'entranament, com de validació i distractors, per tal d'aconseguir una <em>base de dades</em> més amplia. Finalment vem crear un <strong><a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/blob/master/Notebooks/build_database_notebook.ipynb">script</a></strong> per crear aquesta base de dades.</p>
+<p>Primerament, per tal de començar el nostre projecte, el nostre primer objectiu va ser la creació d'una <strong><em>base de dades</em></strong>.Això ho vem fer a partir d'una <em>base de dades</em> ja existent, realitzada per alumnes d'any anteriors, amb unes 180 fotos d'entrenament, que com el nom indica, serviran per entrenar el nostre sistema i, per 450 fotos de validació que serviran per evaluar el nostre sistema. Així doncs, a partir d'aquesta <em>base de dades</em> la nostre primera tasca va ser expendir-la, afegint-hi imatges, tant d'entranament, com de validació i distractors, per tal d'aconseguir una <em>base de dades</em> més amplia. Finalment vem crear un <strong><a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/blob/master/build_database.py">script</a></strong> per crear aquesta base de dades.</p>
 
 <h3>
 <a id="primer-script-detecció-de-punts-característics" class="anchor" href="#primer-script-detecci%C3%B3-de-punts-caracter%C3%ADstics" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Primer Script: Detecció de punts característics</h3>
 
-<p>Un cop teniem la base de dades creada vem puguer començar a treballar amb aquesta. Amb el primer que vem treballar va ser amb la creació d'una <strong><a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/blob/master/First%20script.ipynb">funció</a></strong> per tal de trobar els punts característics de les diferents imatges.</p>
+<p>Un cop teniem la base de dades creada vem poder començar a treballar amb aquesta. Amb el primer que vem treballar va ser amb la creació d'una <strong><a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/blob/master/First%20script.ipynb">funció</a></strong> per tal de trobar els punts característics de les diferents imatges.</p>
 
 <p><img src="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/raw/gh-pages/images/punts.png" alt="punts"></p>
 
-<h3></h3>
+<h3>
+<a id="feature-extraction" class="anchor" href="#feature-extraction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feature Extraction</h3>
 
-<p>El funcionament d’aquesta aplicació consta de diferents parts, com ara la base de dades, els extractors de característiques, classificació de les imatges…
-També hi ha la part encarregada de realitzar l’extracció de descriptors de les imatges, per tal de poder extreure els punts característics (importants) de cada imatge.
-Aquesta informació es guarda en fitxers i és la que ens permetrà relacionar les imatges i trobar la que busquem.</p>
+<p>Més endevant ens vem dedicar a crear un seguit de 5 funcions; <a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/blob/master/get_local_features.py">get_local_featrues</a>, <a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/blob/master/train_codebook.py">train_codebook</a>,<a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/blob/master/get_assignments.py">get_assignments</a>,<a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/blob/master/build_bow.py">build_bow</a> i <a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/blob/master/get_features.py">get_features</a>. Amb aquestes el que vem fer va ser primerament amb la primera funció obtenir tots els descriptors de les imatges que es trobaven a la base de dades, com a resultat d'aquesta funció es van crear dos fitxers diferents, un per les imatges d'entranament i l'altre per les de validació, amb els descriptors per cada imatge. Llavors mitjançant la funció <strong>get_assignments</strong>, vem obtenir les assignacions i com a resultat ens va retornar un vector, indicant-nos per cada descriptor quina assignació té. I finalment vem crear la funció principal. Aquesta agafa tots els id’s de les diferents imatges d’entrenament i validació, n’extreu les característiques i crear una especia de diccionari on hi guardarà els diferents descriptors per a cada imatge. </p>
+
+<h3>
+<a id="rànquing-de-les-imatges" class="anchor" href="#r%C3%A0nquing-de-les-imatges" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Rànquing de les imatges</h3>
+
+<p>Finalment hem creat dues funcions; <strong><a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/blob/master/rank.py">rank</a></strong> i <strong><a href="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/blob/master/eval_rankings.py">eval_rankings</a></strong> amb les quals a partir de establir uns <em>inputs</em> aconseguim com a sortida un fitxer .txt per a cada imatge que conte els id’s de les fotos que més s’assemblen.</p>
+
+<p>Gràcies a un <em>display</em> podem veure un exemple sobre el funcionament del rànquing i com verifica si classifica  les imatges de forma correcta o no. En aquest cas veiem la farmàcia, i podem veure ambun marge de color blau la imatge amb la qua hem fet la cerca, i llavors de les 14 imatges que s'assemblen més, que ens retorna la funció <em>eval_rank</em>,podem veure amb verd les que realment són la farmàcia i amb color vermell les que no ho són.</p>
+
+<p><img src="https://github.com/gdsa-upc/Enjoy-Exploring-Terrassa/raw/gh-pages/images/display.png" alt="display"></p>
+
+<h2>
+<a id="resultats" class="anchor" href="#resultats" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resultats</h2>
+
+<p>Finalment, com a resultats de la nostre aplicació, utilitzant les tècniques descrites anteriorment, amb ROOT_SIFT i un cluster de 8000, hem obtingut el següent mAP (mitjana precisió de cada imatge):</p>
+
+<table>
+<thead>
+<tr>
+<th>Mesura</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mAP (mean Average Precision)</td>
+<td><strong>0.29415</strong></td>
+</tr>
+</tbody>
+</table>
       </section>
     </div>
     <footer>
